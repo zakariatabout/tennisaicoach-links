@@ -24,42 +24,64 @@
   <div class="wrap">
     <div class="card">
       <h1>Politique de confidentialité</h1>
-      <p class="muted">Dernière mise à jour : 7 juin 2026</p>
-      <p>Tennis AI Coach (« l'application », « nous ») respecte ta vie privée. Cette politique explique quelles données l'application utilise et comment.</p>
+      <p class="muted">Dernière mise à jour : 6 août 2026</p>
+      <p>Tennis AI Coach (« l'application », « nous ») analyse par défaut tes vidéos sur ton iPhone, sans compte. Cette politique décrit les données qui peuvent quitter l'appareil, pourquoi elles sont traitées et comment les contrôler.</p>
 
-      <h2>1. Principe : tout reste sur ton appareil</h2>
+      <h2>1. Analyse locale par défaut</h2>
       <ul>
-        <li><strong>Vidéos et images</strong> : pour analyser ta technique, l'application accède aux vidéos que tu filmes ou importes. <strong>L'analyse est réalisée entièrement sur ton iPhone.</strong> Tes vidéos ne sont JAMAIS envoyées sur un serveur, ni à nous, ni à un tiers.</li>
-        <li><strong>Résultats</strong> (scores, mesures, conseils) : stockés uniquement en local sur ton appareil.</li>
-        <li><strong>Aucun compte n'est requis.</strong> Nous ne collectons ni ton nom, ni ton e-mail, ni ta localisation.</li>
+        <li><strong>Vidéos et images</strong> : l'application accède uniquement aux vidéos que tu filmes ou choisis d'importer. La détection, les calculs et la génération des résultats sont réalisés sur ton iPhone.</li>
+        <li><strong>Audio</strong> : le son de la vidéo source reste local et sert à repérer le moment des frappes. L'export de partage retire la piste audio ; aucun son n'est envoyé à Supabase ou à Meta.</li>
+        <li><strong>Résultats</strong> : les séances, scores, mesures et conseils restent stockés localement, sauf si tu choisis volontairement de créer un lien de partage comme décrit ci-dessous.</li>
+        <li><strong>Compte</strong> : aucun compte Tennis AI Coach n'est requis. Nous ne demandons pas ton nom, ton adresse e-mail ni ta localisation pour utiliser l'application.</li>
       </ul>
 
-      <h2>2. Caméra et microphone</h2>
+      <h2>2. Partage volontaire par lien</h2>
+      <p>La création d'un lien est facultative. Lors du premier partage, une information est affichée dans l'application ; après acceptation, ce choix est mémorisé sur l'iPhone. Un partage de séance transmet à Supabase jusqu'à cinq extraits vidéo sans audio et un fichier d'analyse contenant notamment l'identifiant et la date de la séance, sa configuration, les scores, remarques et mesures des coups sélectionnés, les coordonnées et niveaux de confiance des points de pose associés, ainsi que les résultats de jeu de jambes de la séance. Une comparaison peut transmettre jusqu'à trois extraits et les mêmes catégories de données pour chacune des deux séances.</p>
+      <p>Le lien et le stockage associé ne constituent pas un espace privé ou confidentiel : l'accès ne peut pas être garanti aux seuls destinataires choisis. Ne crée pas de lien pour une séance comportant des personnes identifiables ou un contenu sensible. L'application ne fixe aucune expiration au moment de l'envoi. Pour demander la suppression d'un lien, écris à <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a> en joignant le lien exact. Supprimer l'application n'efface pas automatiquement un lien déjà créé.</p>
+
+      <h2>3. Mesure publicitaire avec Meta</h2>
+      <p>L'application utilise le SDK Meta App Events pour l'analytique ainsi que pour mesurer, améliorer et diffuser nos campagnes. Meta peut recevoir des informations techniques sur l'appareil et l'application ainsi que des événements d'usage ou d'achat, par exemple l'ouverture de l'application, la fin de l'onboarding, l'ouverture du paywall, le début d'un essai ou un abonnement. Les événements d'analyse peuvent aussi inclure des informations techniques comme une catégorie de durée, une catégorie d'état thermique, le mode d'entrée vidéo, le rang de l'analyse et le fait qu'elle a été filmée ou importée.</p>
+      <p><strong>Aucune vidéo, piste audio, image, note, vitesse, mesure corporelle ni conseil biomécanique n'est envoyé à Meta.</strong> Ton choix App Tracking Transparency contrôle l'accès à l'identifiant publicitaire et l'autorisation de suivi entre les apps et sites d'autres entreprises. En cas de refus, l'application demande au SDK Meta de ne pas collecter l'identifiant publicitaire et désactive son indicateur de suivi publicitaire. Des événements d'usage ou d'achat et des informations techniques peuvent néanmoins être transmis à Meta. L'application ne transmet pas l'identifiant d'achat décrit ci-dessous à Meta comme identifiant externe.</p>
+      <p>Tu peux modifier l'autorisation dans Réglages iOS &gt; Confidentialité et sécurité &gt; Suivi. Meta traite les données reçues selon sa <a href="https://www.facebook.com/privacy/policy/">politique de confidentialité</a> et ses règles relatives aux <a href="https://www.facebook.com/help/331509497253087/">outils professionnels Meta</a>.</p>
+
+      <h2>4. Abonnements et Apple</h2>
+      <p>Les essais et abonnements sont vendus et facturés par Apple via les achats intégrés. Les offres, durées et prix affichés dans l'application proviennent de l'App Store et peuvent varier selon le pays ou la formule. Nous n'avons pas accès à tes coordonnées bancaires.</p>
+      <p>L'application crée un UUID aléatoire stable d'identité d'achat (<code>appAccountToken</code>), conservé dans le Trousseau de l'iPhone et joint aux achats lorsque sa persistance a été vérifiée. Apple peut le retourner dans les transactions et notifications. Il ne contient ni nom ni adresse e-mail, mais constitue un identifiant pseudonyme permettant de relier les transactions. Le Trousseau peut conserver cet identifiant après une désinstallation.</p>
+      <p>Apple peut transmettre à notre service Cloudflare des notifications signées. Le registre conserve la notification et sa charge signée, son identifiant, son type, son environnement, les identifiants de transaction, le produit, les dates, le prix et la devise lorsqu'ils sont fournis, les informations d'offre, de partage familial ou de révocation, ainsi que l'<code>appAccountToken</code> lorsqu'il est présent. Ces données servent à tenir un registre, rapprocher les conversions, éviter les doublons et diagnostiquer les erreurs. Elles ne commandent pas l'accès Pro dans l'application : celui-ci est déterminé sur l'iPhone à partir des droits StoreKit vérifiés. Le code actuel du service ne programme pas de suppression automatique de ce registre.</p>
+
+      <h2>5. Attribution publicitaire Apple</h2>
+      <p>Apple peut envoyer à notre service Cloudflare une copie du postback gagnant SKAdNetwork ou AdAttributionKit. Le registre peut contenir la charge reçue, les identifiants de postback ou de transaction, la séquence et la version, le réseau publicitaire, l'identifiant de source ou de campagne, l'identifiant de l'application, les valeurs de conversion disponibles, l'indicateur de réinstallation, le type de fidélité et le résultat de validation. Ces données servent à mesurer, dédupliquer et vérifier l'attribution publicitaire. Le code actuel du service ne programme pas de suppression automatique de ce registre.</p>
+
+      <h2>6. Synchronisation iCloud limitée</h2>
+      <p>Si iCloud est actif, l'application synchronise via le compte iCloud uniquement l'historique des semaines actives, le nombre d'analyses réussies, la version de la dernière demande d'avis et des marqueurs anti-doublon de conversion. Aucune vidéo, séance, pose, note, métrique ni conseil n'est synchronisé par ce mécanisme.</p>
+
+      <h2>7. Site web</h2>
+      <p>Les pages de présentation ne chargent pas le pixel Meta. Elles proposent un lien et une redirection vers l'App Store contenant des paramètres de campagne fixes. Les serveurs d'hébergement et Apple peuvent traiter l'adresse IP et des journaux techniques selon leurs propres pratiques afin d'assurer la sécurité et la disponibilité de leurs services.</p>
+
+      <h2>8. Destinataires et sécurité</h2>
+      <p>Selon la fonction utilisée, les destinataires sont Apple (paiements, iCloud et attribution publicitaire), Meta (analytique, événements d'usage ou d'achat et mesure publicitaire), Supabase (stockage des liens créés volontairement), Cloudflare (registre des notifications Apple et des postbacks d'attribution), les prestataires d'hébergement du site et leurs sous-traitants techniques. Les transmissions utilisent HTTPS. Nous ne transmettons pas les vidéos ou résultats biomécaniques à des fins de publicité.</p>
+
+      <h2>9. Conservation et suppression</h2>
       <ul>
-        <li><strong>Caméra</strong> : pour filmer ou importer tes séances.</li>
-        <li><strong>Microphone</strong> : pour détecter le son de la frappe (moment d'impact). L'audio est traité sur l'appareil ; il n'est ni conservé ni transmis.</li>
+        <li><strong>Sur l'iPhone</strong> : jusqu'à ce que tu supprimes une séance ou l'application.</li>
+        <li><strong>Identifiant d'achat local</strong> : conservé dans le Trousseau et susceptible de persister après la désinstallation.</li>
+        <li><strong>iCloud</strong> : la conservation des données limitées décrites ci-dessus dépend du compte et des réglages iCloud.</li>
+        <li><strong>Liens de partage</strong> : l'application ne fixe aucune expiration au moment de l'envoi ; suppression sur demande en fournissant le lien exact. Une désinstallation ne les supprime pas.</li>
+        <li><strong>Événements Meta</strong> : selon les durées et contrôles définis par Meta.</li>
+        <li><strong>Registres Cloudflare</strong> : le code actuel du service ne programme pas de suppression automatique des notifications d'abonnement et postbacks d'attribution.</li>
       </ul>
 
-      <h2>3. Abonnement et paiement</h2>
-      <p>L'abonnement (3 analyses gratuites, puis 1 semaine d'essai gratuit, puis 4,99 €/mois) est géré par <strong>Apple (achat intégré)</strong>. Nous n'avons jamais accès à tes informations bancaires. Tu gères et résilies l'abonnement dans les Réglages de ton iPhone.</p>
+      <h2>10. Tes choix et tes droits</h2>
+      <p>Tu peux refuser ou retirer le suivi dans les Réglages iOS, supprimer tes séances dans l'application et demander l'accès, la rectification ou la suppression des données que nous contrôlons. Pour une demande, écris à <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a>. Pour supprimer un partage, joins son lien exact. Certaines données peuvent devoir être conservées lorsqu'une obligation légale l'impose.</p>
 
-      <h2>4. Suivi / publicité</h2>
-      <p>L'application n'utilise aucun outil de publicité ni de suivi (analytics) tiers, et ne contient pas de traceurs.</p>
+      <h2>11. Enfants</h2>
+      <p>Tennis AI Coach est une application destinée à un public général et n'est pas conçue spécifiquement pour les enfants. Nous ne cherchons pas à collecter sciemment les données personnelles d'un enfant. Si tu es parent ou représentant légal et penses qu'un enfant nous a transmis des données personnelles, contacte-nous à <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a> en indiquant les éléments nécessaires pour identifier la donnée ou le lien concerné. Nous examinerons la demande et supprimerons les données lorsque cela est requis.</p>
 
-      <h2>5. Partage de données</h2>
-      <p>Nous ne vendons ni ne partageons aucune donnée personnelle — il n'y en a d'ailleurs aucune qui quitte ton appareil.</p>
+      <h2>12. Responsable et contact</h2>
+      <p>Responsable : Zakaria Tabout. Contact : <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a>.</p>
 
-      <h2>6. Tes droits (RGPD)</h2>
-      <p>Comme tes données restent sur ton appareil, tu en gardes le contrôle total : supprime une séance dans l'application, ou désinstalle l'application pour tout effacer. Pour toute question : <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a>.</p>
-
-      <h2>7. Enfants</h2>
-      <p>L'application n'est pas destinée aux enfants de moins de 13 ans et ne collecte pas sciemment leurs données.</p>
-
-      <h2>8. Éditeur et contact</h2>
-      <p>Éditeur : Zakaria Tabout. Contact : <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a>.</p>
-
-      <h2>9. Modifications</h2>
-      <p>Toute modification de cette politique sera publiée sur cette page.</p>
+      <h2>13. Modifications</h2>
+      <p>Nous mettrons cette page à jour si les pratiques de l'application changent. La date ci-dessus indique la dernière révision.</p>
     </div>
   </div>
   <footer>© 2026 Zakaria Tabout — Tennis AI Coach · <a href="index.html">Assistance</a> · <a href="terms.html">Conditions</a></footer>
