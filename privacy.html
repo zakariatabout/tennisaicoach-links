@@ -3,31 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tennis AI Coach — Politique de confidentialité</title>
+<title>Tennis AI Coach — Politique de confidentialité · Privacy Policy</title>
 <style>
   :root{--blue:#0A84FF;--blue2:#1E5BFF;--ink:#0B1B33;--muted:#5b6b82;--lime:#B6F23A;--bg:#f6f9ff;}
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
   .hero{background:linear-gradient(135deg,var(--blue) 0%,var(--blue2) 100%);color:#fff;padding:40px 22px;text-align:center}
   .logo{font-size:24px;font-weight:800}.logo .dot{color:var(--lime)}
+  .lang{margin-top:14px;font-size:15px}
+  .lang a{color:#fff;background:rgba(255,255,255,.16);border-radius:999px;padding:6px 14px;margin:0 4px;display:inline-block}
   .wrap{max-width:760px;margin:0 auto;padding:8px 22px 64px}
   .card{background:#fff;border-radius:18px;padding:26px 28px;margin:20px 0;box-shadow:0 6px 24px rgba(13,40,90,.08)}
   h1{font-size:24px;margin:.3em 0}h2{font-size:18px;margin:1.3em 0 .3em;color:var(--blue2)}
+  h2,section{scroll-margin-top:16px}
   a{color:var(--blue);font-weight:600;text-decoration:none}a:hover{text-decoration:underline}
   .muted{color:var(--muted);font-size:14px}
+  .note{background:var(--bg);border-radius:12px;padding:12px 16px;font-size:15px}
   ul{padding-left:20px}
   footer{text-align:center;color:var(--muted);font-size:13px;padding:24px}
 </style>
 </head>
 <body>
-  <div class="hero"><div class="logo">Tennis AI&nbsp;Coach<span class="dot">.</span></div></div>
+  <div class="hero">
+    <div class="logo">Tennis AI&nbsp;Coach<span class="dot">.</span></div>
+    <nav class="lang" aria-label="Langue / Language"><a href="#fr" lang="fr" hreflang="fr">Français</a><a href="#en" lang="en" hreflang="en">English</a></nav>
+  </div>
   <div class="wrap">
-    <div class="card">
-      <h1>Politique de confidentialité</h1>
-      <p class="muted">Dernière mise à jour : 6 août 2026</p>
-      <p>Tennis AI Coach (« l'application », « nous ») analyse par défaut tes vidéos sur ton iPhone, sans compte. Cette politique décrit les données qui peuvent quitter l'appareil, pourquoi elles sont traitées et comment les contrôler.</p>
 
-      <h2>1. Analyse locale par défaut</h2>
+    <section class="card" id="fr" lang="fr">
+      <h1>Politique de confidentialité</h1>
+      <p class="muted">Dernière mise à jour : 7 novembre 2026</p>
+      <p class="note" lang="en"><strong>English:</strong> the full English version of this policy is on this page — <a href="#en" hreflang="en">read it in English</a>; "Ad measurement" (AppsFlyer and OpenAI): <a href="#en-3a" hreflang="en">section 3a</a>.</p>
+      <p>Tennis AI Coach (« l'application », « nous ») analyse par défaut tes vidéos sur ton iPhone, sans compte. Cette politique décrit les données qui peuvent quitter l'appareil, pourquoi elles sont traitées et comment les contrôler.</p>
+      <p class="note">« Mesure publicitaire » dans l'app (AppsFlyer et OpenAI, version 2.17 et suivantes, facultative) : voir le <a href="#fr-3bis">§ 3 bis</a>.</p>
+
+      <h2 id="fr-1">1. Analyse locale par défaut</h2>
       <ul>
         <li><strong>Vidéos et images</strong> : l'application accède uniquement aux vidéos que tu filmes ou choisis d'importer. La détection, les calculs et la génération des résultats sont réalisés sur ton iPhone.</li>
         <li><strong>Audio</strong> : le son de la vidéo source reste local et sert à repérer le moment des frappes. Les exports de partage retirent la piste audio ; aucun son n'est envoyé à Supabase, à Meta ou dans un fichier <code>.tnnscoach</code>.</li>
@@ -35,35 +46,68 @@
         <li><strong>Compte</strong> : aucun compte Tennis AI Coach n'est requis. Nous ne demandons pas ton nom, ton adresse e-mail ni ta localisation pour utiliser l'application.</li>
       </ul>
 
-      <h2>2. Partage volontaire selon la version</h2>
+      <h2 id="fr-2">2. Partage volontaire selon la version</h2>
       <p><strong>Jusqu'à la version 2.10 incluse — ancien partage par lien.</strong> La création d'un lien était facultative. Un partage de séance envoyait à Supabase jusqu'à cinq extraits vidéo sans audio et un fichier d'analyse contenant notamment l'identifiant et la date de la séance, sa configuration, les scores, remarques et mesures des coups sélectionnés, les coordonnées et niveaux de confiance des points de pose associés, ainsi que les résultats de jeu de jambes calculés sur l'ensemble de la séance. Une comparaison pouvait envoyer jusqu'à trois extraits et les mêmes catégories de données pour chacune des deux séances.</p>
       <p>Ce stockage historique n'offrait pas les garanties d'un espace privé : sa configuration permettait l'énumération des objets et ne leur attribuait ni propriétaire individuel, ni expiration automatique, ni suppression intégrée à l'application. Toute personne obtenant un lien pouvait consulter, copier ou retransmettre son contenu. Des objets créés par ces anciennes versions peuvent encore subsister ; supprimer l'application ne les efface pas. Pour demander la suppression d'un ancien partage, écris à <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a> en fournissant le lien concerné.</p>
       <p><strong>À partir de la version 2.11 — fichier local.</strong> L'application n'envoie plus la séance à Supabase et ne crée plus de lien. Elle prépare sur l'iPhone un fichier <code>.tnnscoach</code>, puis ouvre la feuille de partage iOS. Pour une séance, ce fichier contient au maximum les cinq coups sélectionnés ; pour une comparaison, au maximum trois coups par séance. Il contient les extraits vidéo correspondants sans audio, ainsi que les scores, remarques, mesures et points de pose avec leurs niveaux de confiance pour ces coups. Les résultats de jeu de jambes calculés sur l'ensemble de la séance en sont exclus.</p>
       <p>Aucun serveur Tennis AI Coach ne reçoit, ne copie ni ne conserve ce fichier. Tu choisis le destinataire et le service de transmission, par exemple AirDrop, Messages, Mail ou Fichiers. À partir de ce choix, le destinataire et le service tiers choisi déterminent la livraison, la conservation, les copies et les retransmissions éventuelles selon leurs propres règles. Ne partage pas un fichier contenant des personnes identifiables ou un contenu sensible sans leur accord.</p>
 
-      <h2>3. Mesure publicitaire avec Meta</h2>
+      <h2 id="fr-3">3. Mesure publicitaire avec Meta</h2>
       <p>L'application utilise le SDK Meta App Events pour l'analytique ainsi que pour mesurer, améliorer et diffuser nos campagnes. Meta peut recevoir des informations techniques sur l'appareil et l'application ainsi que des événements d'usage ou d'achat, par exemple l'ouverture de l'application, la fin de l'onboarding, l'ouverture du paywall, le début d'un essai ou un abonnement. Jusqu'à la version 2.10 incluse, certains événements d'analyse pouvaient également contenir <code>thermal_bucket</code>, une catégorie de l'état thermique de l'iPhone. À partir de la version 2.11, ce paramètre n'est plus transmis. L'événement de fin d'analyse peut toujours inclure une catégorie de durée (<code>duration_bucket</code>), l'origine technique de la vidéo — caméra, photothèque ou fichiers — (<code>medium</code>) et le rang de l'analyse réussie sur l'appareil (<code>analysis_index</code>).</p>
       <p><strong>Aucune vidéo, piste audio, image, note, vitesse, mesure corporelle ni conseil biomécanique n'est envoyé à Meta.</strong> Ton choix App Tracking Transparency contrôle l'accès à l'identifiant publicitaire et l'autorisation de suivi entre les apps et sites d'autres entreprises. En cas de refus, l'application demande au SDK Meta de ne pas collecter l'identifiant publicitaire et désactive son indicateur de suivi publicitaire. Des événements d'usage ou d'achat et des informations techniques peuvent néanmoins être transmis à Meta. L'application ne transmet pas l'identifiant d'achat décrit ci-dessous à Meta comme identifiant externe.</p>
       <p>Tu peux modifier l'autorisation dans Réglages iOS &gt; Confidentialité et sécurité &gt; Suivi. Meta traite les données reçues selon sa <a href="https://www.facebook.com/privacy/policy/">politique de confidentialité</a> et ses règles relatives aux <a href="https://www.facebook.com/help/331509497253087/">outils professionnels Meta</a>.</p>
 
-      <h2>4. Abonnements et Apple</h2>
+      <h2 id="fr-3bis">3 bis. Mesure de nos publicités ChatGPT avec AppsFlyer et OpenAI (version 2.17 et suivantes)</h2>
+      <p>Cette mesure ne s'active que si tu l'acceptes dans l'application (« Mesure publicitaire », facultatif, sans effet sur les fonctions de l'app ni sur les achats) <strong>et</strong> si tu autorises le suivi dans le dialogue Apple App Tracking Transparency. Elle n'est proposée que sur les installations où elle est possible : l'application téléchargée depuis l'App Store, lorsque ton premier téléchargement de l'application avec ton compte Apple date de la version 2.17 ou d'une version plus récente (jamais via TestFlight ; jamais non plus si ton compte Apple avait déjà téléchargé une version antérieure, même si tu réinstalles l'app ou l'installes sur un autre appareil). Nous utilisons la variante « Strict » du SDK AppsFlyer qui, selon AppsFlyer, ne contient pas la collecte de l'identifiant publicitaire (IDFA) ; nous activons aussi le réglage qui désactive la collecte de l'identifiant fournisseur (IDFV). L'application indique au SDK que ton accord couvre la mesure, pas la personnalisation des publicités. Dans l'app, ce choix s'appelle « Mesure publicitaire » ; il est distinct de l'autorisation de suivi d'Apple et ne change pas ce que reçoit Meta (§ 3).</p>
+      <p>AppsFlyer, prestataire de mesure agissant pour notre compte, peut alors recevoir :</p>
+      <ul>
+        <li>des informations techniques sur l'appareil, le réseau et l'application : adresse IP, qui peut servir à une localisation approximative ; modèle ; version du système ; langue ; écran ; user agent ; dates d'installation et de lancement ;</li>
+        <li>des données de performance utilisées contre la fraude, comme la durée de lancement ou le niveau de batterie ;</li>
+        <li>un identifiant AppsFlyer propre à cette installation ;</li>
+        <li>les événements décrits ci-dessous.</li>
+      </ul>
+      <p>Selon la documentation d'AppsFlyer, son SDK peut aussi envoyer avec le lancement des données du reçu d'installation signé par Apple. Il peut également lire la transaction de téléchargement signée par Apple (AppTransaction), sans que cette documentation dise si elle est transmise. Nous n'avons trouvé aucun réglage officiel pour désactiver l'un ou l'autre.</p>
+      <p>Les événements sont les suivants, seulement s'ils ont lieu une fois la mesure active (après ton accord et ton autorisation de suivi) :</p>
+      <ul>
+        <li>fin du parcours d'accueil ;</li>
+        <li>offre affichée ;</li>
+        <li>achat commencé (identifiant du produit) ;</li>
+        <li>première analyse admise affichée après ton accord : ni l'exemple de démonstration, ni une séance que l'analyse n'a pas retenue, donc pas forcément ta première analyse dans l'app ;</li>
+        <li>essai gratuit vérifié (identifiant du produit, sans montant) ;</li>
+        <li>souscription payante vérifiée : premier paiement d'un abonnement, y compris le premier paiement prélevé automatiquement à la fin d'un essai gratuit, ou réabonnement après expiration (identifiant du produit, prix et devise signés par Apple) ; jamais les renouvellements suivants.</li>
+      </ul>
+      <p>Le SDK signale aussi à AppsFlyer chaque ouverture ou retour au premier plan de l'app (sessions d'utilisation).</p>
+      <p>AppsFlyer utilise ces informations pour tenter de rapprocher ton installation et ces événements de clics sur nos publicités dans ChatGPT. Avec son option « Advanced Privacy », activée pour ce partenaire, et selon sa documentation, seuls l'installation et les événements qu'AppsFlyer attribue à une publicité ChatGPT, et que nous avons choisi de partager, sont transmis à OpenAI : essai démarré, souscription (avec son montant, sa devise et l'identifiant du produit) et, si AppsFlyer permet l'envoi des sessions pour ce partenaire, chaque session (ouverture ou retour au premier plan) qu'AppsFlyer retient dans son décompte. Selon cette même documentation, ils le sont sans les identifiants au niveau de l'utilisateur ; le pays, la campagne, l'heure arrondie, le nom de l'événement et, pour une souscription, son montant, sa devise et l'identifiant du produit peuvent y figurer. Dans notre configuration actuelle, les autres événements (fin du parcours d'accueil, offre affichée, achat commencé, première analyse) restent chez AppsFlyer et ne sont pas transmis à OpenAI.</p>
+      <p><strong>L'application ne remet à AppsFlyer, et donc à OpenAI, aucune vidéo, piste audio, image, score, mesure, conseil, prénom, e-mail ni numéro de téléphone</strong> : nos événements n'en contiennent pas, et nous ne fournissons au SDK ni nom, ni e-mail, ni téléphone, ni identifiant client. Ces données ne sont pas anonymes.</p>
+      <p>Tu peux retirer ton accord à tout moment dans « Mon abonnement » : l'application arrête aussitôt le SDK AppsFlyer et efface sa propre file d'événements en attente. Nous n'avons trouvé dans la documentation d'AppsFlyer aucun moyen, pour l'application, d'effacer ce que son SDK garde lui-même en attente d'envoi. Pour éviter que cela parte après ton retrait, si le SDK avait déjà démarré, la mesure reste coupée sur cet appareil tant que l'app y reste installée. Il en va de même, dès ton retour dans l'application, si tu retires l'autorisation de suivi dans Réglages iOS.</p>
+      <p>Pour demander l'effacement des données déjà reçues par AppsFlyer, écris à <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a>.</p>
+      <ul>
+        <li>Selon sa documentation, AppsFlyer traite une demande d'effacement à partir d'un identifiant précis ; avec notre configuration, ce serait l'identifiant AppsFlyer de ton installation.</li>
+        <li>Or l'application ne crée aucun compte et n'affiche pas cet identifiant : sans lui, nous ne pouvons en général pas retrouver ton installation chez AppsFlyer.</li>
+        <li>Nous te répondrons dans un délai d'un mois, en te disant ce qui est possible dans ton cas. Si l'installation peut être identifiée, nous demanderons son effacement à AppsFlyer, qui traite la demande selon sa propre procédure.</li>
+        <li>Retirer ton accord dans l'application arrête aussitôt le SDK AppsFlyer, et l'application ne lui remet plus aucun événement.</li>
+      </ul>
+      <p>Les renouvellements suivants et les remboursements ne sont jamais transmis à AppsFlyer. Le premier paiement qui suit un essai gratuit, ou un abonnement pris hors de l'application (sur un autre appareil ou dans les réglages de l'App Store), peut l'être lorsque l'application le constate, si la mesure était déjà active au moment de ce paiement et dans les 7 jours qui le suivent.</p>
+      <p>AppsFlyer traite les données selon sa <a href="https://www.appsflyer.com/legal/services-privacy-policy/">politique de confidentialité des services</a> (« Services Privacy Policy ») ; OpenAI selon sa <a href="https://openai.com/policies/privacy-policy/">politique de confidentialité</a>.</p>
+
+      <h2 id="fr-4">4. Abonnements et Apple</h2>
       <p>Les essais et abonnements sont vendus et facturés par Apple via les achats intégrés. Les offres, durées et prix affichés dans l'application proviennent de l'App Store et peuvent varier selon le pays ou la formule. Nous n'avons pas accès à tes coordonnées bancaires.</p>
       <p>L'application crée un UUID aléatoire stable d'identité d'achat (<code>appAccountToken</code>), conservé dans le Trousseau de l'iPhone et joint aux achats lorsque sa persistance a été vérifiée. Apple peut le retourner dans les transactions et notifications. Il ne contient ni nom ni adresse e-mail, mais constitue un identifiant pseudonyme permettant de relier les transactions. Le Trousseau peut conserver cet identifiant après une désinstallation.</p>
       <p>Apple peut transmettre à notre service Cloudflare des notifications signées. Le registre conserve la notification et sa charge signée, son identifiant, son type, son environnement, les identifiants de transaction, le produit, les dates, le prix et la devise lorsqu'ils sont fournis, les informations d'offre, de partage familial ou de révocation, ainsi que l'<code>appAccountToken</code> lorsqu'il est présent. Ces données servent à tenir un registre, rapprocher les conversions, éviter les doublons et diagnostiquer les erreurs. Elles ne commandent pas l'accès Pro dans l'application : celui-ci est déterminé sur l'iPhone à partir des droits StoreKit vérifiés. Le code actuel du service ne programme pas de suppression automatique de ce registre.</p>
 
-      <h2>5. Attribution publicitaire Apple</h2>
+      <h2 id="fr-5">5. Attribution publicitaire Apple</h2>
       <p>Apple peut envoyer à notre service Cloudflare une copie du postback gagnant SKAdNetwork ou AdAttributionKit. Le registre peut contenir la charge reçue, les identifiants de postback ou de transaction, la séquence et la version, le réseau publicitaire, l'identifiant de source ou de campagne, l'identifiant de l'application, les valeurs de conversion disponibles, l'indicateur de réinstallation, le type de fidélité et le résultat de validation. Ces données servent à mesurer, dédupliquer et vérifier l'attribution publicitaire. Le code actuel du service ne programme pas de suppression automatique de ce registre.</p>
 
-      <h2>6. Synchronisation iCloud limitée</h2>
+      <h2 id="fr-6">6. Synchronisation iCloud limitée</h2>
       <p>Si iCloud est actif, l'application synchronise via le compte iCloud uniquement l'historique des semaines actives, le nombre d'analyses réussies, la version de la dernière demande d'avis et des marqueurs anti-doublon de conversion. Aucune vidéo, séance, pose, note, métrique ni conseil n'est synchronisé par ce mécanisme.</p>
 
-      <h2>7. Site web</h2>
+      <h2 id="fr-7">7. Site web</h2>
       <p>Les pages de présentation ne chargent pas le pixel Meta. Elles proposent un lien et une redirection vers l'App Store contenant des paramètres de campagne fixes. Les serveurs d'hébergement et Apple peuvent traiter l'adresse IP et des journaux techniques selon leurs propres pratiques afin d'assurer la sécurité et la disponibilité de leurs services.</p>
 
-      <h2>8. Destinataires et sécurité</h2>
-      <p>Selon la fonction et la version utilisées, les destinataires sont Apple (paiements, iCloud et attribution publicitaire), Meta (analytique, événements d'usage ou d'achat et mesure publicitaire), Supabase (uniquement pour les partages par lien créés par les versions 2.10 et antérieures), Cloudflare (registre des notifications Apple et des postbacks d'attribution), les prestataires d'hébergement du site et leurs sous-traitants techniques. À partir de la version 2.11, le destinataire et le service que tu choisis dans la feuille de partage iOS reçoivent le fichier <code>.tnnscoach</code> ; aucun serveur Tennis AI Coach n'en reçoit de copie. Les transmissions réseau de nos services utilisent HTTPS. Nous ne transmettons pas les vidéos ou résultats biomécaniques à des fins de publicité.</p>
+      <h2 id="fr-8">8. Destinataires et sécurité</h2>
+      <p>Selon la fonction et la version utilisées, les destinataires sont Apple (paiements, iCloud et attribution publicitaire), Meta (analytique, événements d'usage ou d'achat et mesure publicitaire), AppsFlyer (à partir de la version 2.17 : mesure de nos publicités ChatGPT, seulement avec ton accord dans l'application et ton autorisation de suivi), OpenAI (installations et événements qu'AppsFlyer attribue à nos publicités ChatGPT, comme décrit au <a href="#fr-3bis">§ 3 bis</a>), Supabase (uniquement pour les partages par lien créés par les versions 2.10 et antérieures), Cloudflare (registre des notifications Apple et des postbacks d'attribution), les prestataires d'hébergement du site et leurs sous-traitants techniques. À partir de la version 2.11, le destinataire et le service que tu choisis dans la feuille de partage iOS reçoivent le fichier <code>.tnnscoach</code> ; aucun serveur Tennis AI Coach n'en reçoit de copie. Les transmissions réseau de nos services utilisent HTTPS. Nous ne transmettons pas les vidéos ou résultats biomécaniques à des fins de publicité.</p>
 
-      <h2>9. Conservation et suppression</h2>
+      <h2 id="fr-9">9. Conservation et suppression</h2>
       <ul>
         <li><strong>Sur l'iPhone</strong> : jusqu'à ce que tu supprimes une séance ou l'application.</li>
         <li><strong>Identifiant d'achat local</strong> : conservé dans le Trousseau et susceptible de persister après la désinstallation.</li>
@@ -71,22 +115,127 @@
         <li><strong>Anciens liens, versions 2.10 et antérieures</strong> : l'application ne fixait aucune expiration au moment de l'envoi. Des objets peuvent encore subsister ; une désinstallation ne les supprime pas. Une suppression peut être demandée en fournissant le lien concerné.</li>
         <li><strong>Fichiers <code>.tnnscoach</code>, version 2.11 et suivantes</strong> : aucun exemplaire n'est conservé par un serveur Tennis AI Coach. La conservation d'un fichier envoyé dépend de tes choix, du destinataire et du service tiers utilisé.</li>
         <li><strong>Événements Meta</strong> : selon les durées et contrôles définis par Meta.</li>
+        <li><strong>File d'attente du SDK AppsFlyer, version 2.17 et suivantes</strong> : ce que le SDK garde en attente d'envoi reste sur l'iPhone jusqu'à la suppression de l'application ; si la mesure est coupée après ton retrait, il n'est pas envoyé (voir le <a href="#fr-3bis">§ 3 bis</a>).</li>
+        <li><strong>Données AppsFlyer et OpenAI, version 2.17 et suivantes</strong> : selon les durées et contrôles définis par ces sociétés ; l'effacement chez AppsFlyer se demande comme décrit au <a href="#fr-3bis">§ 3 bis</a>.</li>
         <li><strong>Registres Cloudflare</strong> : le code actuel du service ne programme pas de suppression automatique des notifications d'abonnement et postbacks d'attribution.</li>
       </ul>
 
-      <h2>10. Tes choix et tes droits</h2>
-      <p>Tu peux refuser ou retirer le suivi dans les Réglages iOS, supprimer tes séances dans l'application et demander l'accès, la rectification ou la suppression des données que nous contrôlons. Pour une demande, écris à <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a>. Pour un ancien partage créé par une version 2.10 ou antérieure, fournis le lien concerné. Pour un fichier <code>.tnnscoach</code> partagé à partir de la version 2.11, nous ne détenons aucune copie serveur à supprimer : utilise les contrôles du service choisi et contacte le destinataire pour ses propres copies. Certaines données peuvent devoir être conservées lorsqu'une obligation légale l'impose.</p>
+      <h2 id="fr-10">10. Tes choix et tes droits</h2>
+      <p>Tu peux refuser ou retirer le suivi dans les Réglages iOS, retirer, dans « Mon abonnement » &gt; « Mesure publicitaire » &gt; « Retirer mon accord », la mesure de nos publicités ChatGPT par AppsFlyer et OpenAI (<a href="#fr-3bis">§ 3 bis</a>, version 2.17 et suivantes, si elle t'a été proposée ; ce choix ne change pas ce que reçoit Meta, qui dépend du suivi dans les Réglages iOS), supprimer tes séances dans l'application et demander l'accès, la rectification ou la suppression des données que nous contrôlons. Pour une demande, écris à <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a>. Pour un ancien partage créé par une version 2.10 ou antérieure, fournis le lien concerné. Pour un fichier <code>.tnnscoach</code> partagé à partir de la version 2.11, nous ne détenons aucune copie serveur à supprimer : utilise les contrôles du service choisi et contacte le destinataire pour ses propres copies. Certaines données peuvent devoir être conservées lorsqu'une obligation légale l'impose.</p>
 
-      <h2>11. Enfants</h2>
+      <h2 id="fr-11">11. Enfants</h2>
       <p>Tennis AI Coach est une application destinée à un public général et n'est pas conçue spécifiquement pour les enfants. Nous ne cherchons pas à collecter sciemment les données personnelles d'un enfant. Si tu es parent ou représentant légal et penses qu'un enfant nous a transmis des données personnelles, contacte-nous à <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a> en indiquant les éléments nécessaires pour identifier la donnée ou le lien concerné. Nous examinerons la demande et supprimerons les données lorsque cela est requis.</p>
 
-      <h2>12. Responsable et contact</h2>
+      <h2 id="fr-12">12. Responsable et contact</h2>
       <p>Responsable : Zakaria Tabout. Contact : <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a>.</p>
 
-      <h2>13. Modifications</h2>
+      <h2 id="fr-13">13. Modifications</h2>
       <p>Nous mettrons cette page à jour si les pratiques de l'application changent. La date ci-dessus indique la dernière révision.</p>
-    </div>
+    </section>
+
+    <section class="card" id="en" lang="en">
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: November 7, 2026</p>
+      <p class="note" lang="fr"><strong>Français :</strong> <a href="#fr" hreflang="fr">version française en haut de cette page</a>.</p>
+      <p>Tennis AI Coach ("the app", "we") analyzes your videos on your iPhone by default, without an account. This policy describes the data that may leave the device, why it is processed and how you can control it.</p>
+      <p class="note">"Ad measurement" in the app (AppsFlyer and OpenAI, version 2.17 and later, optional): see <a href="#en-3a">section 3a</a>.</p>
+
+      <h2 id="en-1">1. Local analysis by default</h2>
+      <ul>
+        <li><strong>Videos and images</strong>: the app only accesses the videos you film or choose to import. Detection, calculations and results are produced on your iPhone.</li>
+        <li><strong>Audio</strong>: the sound of the source video stays on the device and is used to locate the moment of each hit. Share exports remove the audio track; no sound is sent to Supabase or Meta, or included in a <code>.tnnscoach</code> file.</li>
+        <li><strong>Results</strong>: sessions, scores, measurements and advice stay stored on the device, except the data you deliberately choose to share, as described below for your version.</li>
+        <li><strong>Account</strong>: no Tennis AI Coach account is required. We do not ask for your name, email address or location to use the app.</li>
+      </ul>
+
+      <h2 id="en-2">2. Voluntary sharing, by version</h2>
+      <p><strong>Up to and including version 2.10 — former link sharing.</strong> Creating a link was optional. Sharing a session sent to Supabase up to five video clips without audio and an analysis file containing, among other things, the session's identifier and date, its configuration, the scores, remarks and measurements of the selected shots, the coordinates and confidence levels of the related pose points, and the footwork results calculated over the whole session. A comparison could send up to three clips and the same categories of data for each of the two sessions.</p>
+      <p>This historical storage did not offer the guarantees of a private space: its configuration allowed objects to be listed and gave them no individual owner, no automatic expiry and no deletion built into the app. Anyone who obtained a link could view, copy or pass on its content. Objects created by these older versions may still exist; deleting the app does not erase them. To request deletion of an old share, write to <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a> with the link concerned.</p>
+      <p><strong>From version 2.11 — local file.</strong> The app no longer sends the session to Supabase and no longer creates a link. It prepares a <code>.tnnscoach</code> file on the iPhone, then opens the iOS share sheet. For a session, this file contains at most the five selected shots; for a comparison, at most three shots per session. It contains the corresponding video clips without audio, and the scores, remarks, measurements and pose points with their confidence levels for these shots. Footwork results calculated over the whole session are excluded.</p>
+      <p>No Tennis AI Coach server receives, copies or keeps this file. You choose the recipient and the transfer service, for example AirDrop, Messages, Mail or Files. From that choice on, the recipient and the third-party service you chose determine delivery, retention, copies and any onward sharing under their own rules. Do not share a file showing identifiable people or sensitive content without their consent.</p>
+
+      <h2 id="en-3">3. Ad measurement with Meta</h2>
+      <p>The app uses the Meta App Events SDK for analytics and to measure, improve and deliver our campaigns. Meta may receive technical information about the device and the app, as well as usage or purchase events, for example opening the app, finishing onboarding, opening the paywall, starting a trial or subscribing. Up to and including version 2.10, some analysis events could also contain <code>thermal_bucket</code>, a category of the iPhone's thermal state. From version 2.11, this parameter is no longer sent. The analysis-completed event may still include a duration category (<code>duration_bucket</code>), the technical origin of the video — camera, photo library or files — (<code>medium</code>) and the rank of the successful analysis on the device (<code>analysis_index</code>).</p>
+      <p><strong>No video, audio track, image, score, speed, body measurement or biomechanical advice is sent to Meta.</strong> Your App Tracking Transparency choice controls access to the advertising identifier and permission to track across other companies' apps and websites. If you decline, the app asks the Meta SDK not to collect the advertising identifier and turns off its ad-tracking flag. Usage or purchase events and technical information may nevertheless be sent to Meta. The app does not send the purchase identifier described below to Meta as an external identifier.</p>
+      <p>You can change this permission in iOS Settings &gt; Privacy &amp; Security &gt; Tracking. Meta processes the data it receives under its <a href="https://www.facebook.com/privacy/policy/">privacy policy</a> and its rules for <a href="https://www.facebook.com/help/331509497253087/">Meta Business Tools</a>.</p>
+
+      <h2 id="en-3a">3a. Measuring our ChatGPT ads with AppsFlyer and OpenAI (version 2.17 and later)</h2>
+      <p>This measurement is only active if you accept it in the app ("Ad measurement", optional, with no effect on app features or purchases) <strong>and</strong> allow tracking in Apple's App Tracking Transparency dialog. It is only offered on installations where it is possible: the app downloaded from the App Store, when your first download of the app with your Apple Account was version 2.17 or later (never through TestFlight, and never if your Apple Account had already downloaded an earlier version, even if you reinstall the app or install it on another device). We use the "Strict" version of the AppsFlyer SDK, which according to AppsFlyer does not contain advertising identifier (IDFA) collection; we also turn on the setting that disables collection of the vendor identifier (IDFV). The app tells the SDK that your consent covers measurement, not ad personalization. In the app, this choice is called "Ad measurement"; it is separate from Apple's tracking permission and does not change what Meta receives (section 3).</p>
+      <p>AppsFlyer, a measurement provider acting on our behalf, may then receive:</p>
+      <ul>
+        <li>technical information about the device, network and app: IP address, which may be used for approximate location; model; OS version; language; screen; user agent; install and launch dates;</li>
+        <li>performance data used against fraud, such as launch duration or battery level;</li>
+        <li>an AppsFlyer identifier specific to this installation;</li>
+        <li>the events described below.</li>
+      </ul>
+      <p>According to AppsFlyer's documentation, its SDK may also send data from the Apple-signed install receipt with the launch. It may also read the Apple-signed app download transaction (AppTransaction), but that documentation does not say whether it is transmitted. We found no official setting to turn either off.</p>
+      <p>The events are the following, only if they happen once measurement is active (after your consent and your tracking permission):</p>
+      <ul>
+        <li>onboarding completed;</li>
+        <li>offer shown;</li>
+        <li>purchase started (product identifier);</li>
+        <li>first accepted analysis shown after your consent: neither the demo example nor a session the analysis did not accept, so not necessarily your first analysis in the app;</li>
+        <li>verified free trial (product identifier, no amount);</li>
+        <li>verified paid subscription: the first payment of a subscription, including the first payment charged automatically when a free trial ends, or a resubscription after expiry (product identifier, Apple-signed price and currency); never later renewals.</li>
+      </ul>
+      <p>The SDK also reports each app launch or return to the foreground to AppsFlyer (usage sessions).</p>
+      <p>AppsFlyer uses this information to try to match your installation and these events with clicks on our ads in ChatGPT. With its "Advanced Privacy" option, turned on for this partner, and according to its documentation, only the installation and the events that AppsFlyer attributes to a ChatGPT ad, and that we chose to share, are forwarded to OpenAI: trial started, subscription (with its amount, currency and product identifier) and, if AppsFlyer allows session sending for this partner, each session (app launch or return to the foreground) that AppsFlyer counts. According to the same documentation, they are forwarded without user-level identifiers; the country, campaign, rounded time, event name and, for a subscription, its amount, currency and product identifier may be included. In our current setup, the other events (onboarding completed, offer shown, purchase started, first analysis) stay with AppsFlyer and are not forwarded to OpenAI.</p>
+      <p><strong>The app does not hand AppsFlyer, and therefore OpenAI, any video, audio, image, score, measurement, advice, first name, email or phone number</strong>: our events contain none, and we give the SDK no name, email, phone number or customer identifier. This data is not anonymous.</p>
+      <p>You can withdraw your consent at any time in "My subscription": the app immediately stops the AppsFlyer SDK and deletes its own queue of waiting events. We found no way in AppsFlyer's documentation for the app to delete what its SDK itself keeps waiting to be sent. To prevent that from being sent after you withdraw, if the SDK had already started, measurement stays off on this device for as long as the app stays installed. The same applies, as soon as you return to the app, if you turn tracking off in iOS Settings.</p>
+      <p>To request deletion of data already received by AppsFlyer, write to <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a>.</p>
+      <ul>
+        <li>According to its documentation, AppsFlyer handles a deletion request from a specific identifier; with our setup, that would be your installation's AppsFlyer identifier.</li>
+        <li>The app has no account and does not show this identifier: without it, we generally cannot find your installation at AppsFlyer.</li>
+        <li>We will reply within one month and tell you what is possible in your case. If the installation can be identified, we will ask AppsFlyer to delete it, and AppsFlyer handles the request under its own procedure.</li>
+        <li>Withdrawing your consent in the app immediately stops the AppsFlyer SDK, and the app no longer hands it any event.</li>
+      </ul>
+      <p>Later renewals and refunds are never sent to AppsFlyer. The first payment after a free trial, or a subscription started outside the app (on another device or in App Store settings), may be sent when the app detects it, if measurement was already active at the time of that payment and within 7 days after it.</p>
+      <p>AppsFlyer processes the data under its <a href="https://www.appsflyer.com/legal/services-privacy-policy/">Services Privacy Policy</a>; OpenAI under its <a href="https://openai.com/policies/privacy-policy/">privacy policy</a>.</p>
+
+      <h2 id="en-4">4. Subscriptions and Apple</h2>
+      <p>Trials and subscriptions are sold and billed by Apple through in-app purchases. The offers, durations and prices shown in the app come from the App Store and may vary by country or plan. We have no access to your bank details.</p>
+      <p>The app creates a stable random purchase-identity UUID (<code>appAccountToken</code>), kept in the iPhone's Keychain and attached to purchases once its persistence has been verified. Apple may return it in transactions and notifications. It contains no name or email address, but it is a pseudonymous identifier that links transactions together. The Keychain may keep this identifier after the app is deleted.</p>
+      <p>Apple may send signed notifications to our Cloudflare service. The log keeps the notification and its signed payload, its identifier, its type, its environment, the transaction identifiers, the product, the dates, the price and currency when provided, offer, Family Sharing or revocation information, and the <code>appAccountToken</code> when present. This data is used to keep a log, reconcile conversions, avoid duplicates and diagnose errors. It does not control Pro access in the app: that is determined on the iPhone from verified StoreKit entitlements. The current code of the service does not schedule any automatic deletion of this log.</p>
+
+      <h2 id="en-5">5. Apple ad attribution</h2>
+      <p>Apple may send our Cloudflare service a copy of the winning SKAdNetwork or AdAttributionKit postback. The log may contain the payload received, the postback or transaction identifiers, the sequence and version, the ad network, the source or campaign identifier, the app identifier, the available conversion values, the re-download flag, the fidelity type and the validation result. This data is used to measure, deduplicate and verify ad attribution. The current code of the service does not schedule any automatic deletion of this log.</p>
+
+      <h2 id="en-6">6. Limited iCloud sync</h2>
+      <p>If iCloud is on, the app syncs through your iCloud account only the history of active weeks, the number of successful analyses, the version of the last review request and conversion de-duplication markers. No video, session, pose, score, metric or advice is synced by this mechanism.</p>
+
+      <h2 id="en-7">7. Website</h2>
+      <p>The presentation pages do not load the Meta pixel. They offer a link and a redirect to the App Store with fixed campaign parameters. Hosting servers and Apple may process the IP address and technical logs under their own practices to keep their services secure and available.</p>
+
+      <h2 id="en-8">8. Recipients and security</h2>
+      <p>Depending on the feature and the version used, the recipients are Apple (payments, iCloud and ad attribution), Meta (analytics, usage or purchase events and ad measurement), AppsFlyer (from version 2.17: measurement of our ChatGPT ads, only with your consent in the app and your tracking permission), OpenAI (installations and events that AppsFlyer attributes to our ChatGPT ads, as described in <a href="#en-3a">section 3a</a>), Supabase (only for link shares created by versions 2.10 and earlier), Cloudflare (log of Apple notifications and attribution postbacks), the website hosting providers and their technical subcontractors. From version 2.11, the recipient and the service you choose in the iOS share sheet receive the <code>.tnnscoach</code> file; no Tennis AI Coach server receives a copy. Our services' network transmissions use HTTPS. We do not pass videos or biomechanical results on for advertising purposes.</p>
+
+      <h2 id="en-9">9. Retention and deletion</h2>
+      <ul>
+        <li><strong>On the iPhone</strong>: until you delete a session or the app.</li>
+        <li><strong>Local purchase identifier</strong>: kept in the Keychain and may persist after the app is deleted.</li>
+        <li><strong>iCloud</strong>: retention of the limited data described above depends on your iCloud account and settings.</li>
+        <li><strong>Old links, versions 2.10 and earlier</strong>: the app set no expiry when sending. Objects may still exist; deleting the app does not remove them. Deletion can be requested by providing the link concerned.</li>
+        <li><strong><code>.tnnscoach</code> files, version 2.11 and later</strong>: no copy is kept by a Tennis AI Coach server. How long a sent file is kept depends on your choices, the recipient and the third-party service used.</li>
+        <li><strong>Meta events</strong>: according to the retention periods and controls set by Meta.</li>
+        <li><strong>AppsFlyer SDK queue, version 2.17 and later</strong>: what the SDK keeps waiting to be sent stays on the iPhone until the app is deleted; if measurement is turned off after you withdraw, it is not sent (see <a href="#en-3a">section 3a</a>).</li>
+        <li><strong>AppsFlyer and OpenAI data, version 2.17 and later</strong>: according to the retention periods and controls set by these companies; deletion at AppsFlyer is requested as described in <a href="#en-3a">section 3a</a>.</li>
+        <li><strong>Cloudflare logs</strong>: the current code of the service does not schedule any automatic deletion of subscription notifications and attribution postbacks.</li>
+      </ul>
+
+      <h2 id="en-10">10. Your choices and rights</h2>
+      <p>You can decline or withdraw tracking in iOS Settings, withdraw, in "My subscription" &gt; "Ad measurement" &gt; "Withdraw my consent", the measurement of our ChatGPT ads by AppsFlyer and OpenAI (<a href="#en-3a">section 3a</a>, version 2.17 and later, if it was offered to you; this choice does not change what Meta receives, which depends on tracking in iOS Settings), delete your sessions in the app, and request access to, correction of or deletion of the data we control. For any request, write to <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a>. For an old share created by version 2.10 or earlier, provide the link concerned. For a <code>.tnnscoach</code> file shared from version 2.11, we hold no server copy to delete: use the controls of the service you chose and contact the recipient about their own copies. Some data may have to be kept when the law requires it.</p>
+
+      <h2 id="en-11">11. Children</h2>
+      <p>Tennis AI Coach is an app for a general audience and is not designed specifically for children. We do not knowingly seek to collect a child's personal data. If you are a parent or legal guardian and believe that a child has sent us personal data, contact us at <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a> with the details needed to identify the data or link concerned. We will review the request and delete the data where required.</p>
+
+      <h2 id="en-12">12. Data controller and contact</h2>
+      <p>Controller: Zakaria Tabout. Contact: <a href="mailto:tabout.zakaria@gmail.com">tabout.zakaria@gmail.com</a>.</p>
+
+      <h2 id="en-13">13. Changes</h2>
+      <p>We will update this page if the app's practices change. The date above shows the latest revision.</p>
+    </section>
+
   </div>
-  <footer>© 2026 Zakaria Tabout — Tennis AI Coach · <a href="index.html">Assistance</a> · <a href="terms.html">Conditions</a></footer>
+  <footer>© 2026 Zakaria Tabout — Tennis AI Coach · <a href="index.html">Assistance / <span lang="en">Support</span></a> · <a href="terms.html">Conditions / <span lang="en">Terms</span></a></footer>
 </body>
 </html>
